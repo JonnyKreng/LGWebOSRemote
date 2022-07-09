@@ -1,5 +1,5 @@
 pkgname=('lgwebosremote-git')
-pkgver=r142.c38785d
+pkgver=r143.094c909
 pkgrel=1
 pkgdesc="Command line webOS remote for LGTVs"
 arch=('x86_64')
