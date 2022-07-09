@@ -49,7 +49,10 @@ class LGTVRemote(WebSocketClient):
 
         if self.__hostname is not None:
             # Over ride IP address when we know the hostname
-            self.__ip = socket.gethostbyname(self.__hostname)
+	    try:
+                self.__ip = socket.gethostbyname(self.__hostname)
+	    except:
+		pass
 
         super(LGTVRemote, self).__init__('ws://' + self.__ip + ':3000/', exclude_headers=["Origin"])
 
